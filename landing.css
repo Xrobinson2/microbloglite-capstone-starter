@@ -1,0 +1,160 @@
+/* Landing Page CSS */
+
+
+
+/* Body styling */
+body {
+    background-color: #f8f9fa; 
+    font-family: 'Roboto', sans-serif; 
+    color: #495057; 
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Navbar styling */
+.navbar {
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    padding: 1rem 0; 
+}
+
+.navbar-brand {
+    font-size: 1.5rem; 
+    font-weight: bold; 
+    color: #007bff;
+}
+
+.navbar-nav .nav-link {
+    color: #6c757d; 
+    font-weight: bold; 
+    padding: 0.5rem 1rem; 
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover {
+    color: #007bff; 
+}
+
+/* Main content container */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+  }
+  
+  form#login {
+    max-width: 350px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  form#login div {
+    margin-bottom: 15px;
+  }
+  
+  form#login label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  form#login input[type="text"],
+  form#login input[type="password"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  form#login input[type="text"]:focus,
+  form#login input[type="password"]:focus {
+    outline: none;
+    border-color: #5b9dd9;
+    box-shadow: 0px 0px 5px rgba(91, 157, 217, 0.5);
+  }
+  
+  .form-check-label {
+    font-weight: normal;
+  }
+  
+  button#loginButton {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #5b9dd9;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button#loginButton:hover {
+    background-color: #4a8dc0;
+  }
+  
+
+
+main {
+    padding: 2rem 0; 
+}
+
+.card {
+    background-color: #ffffff; 
+    border: none; 
+    border-radius: 0.5rem; 
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1); 
+}
+
+.card-body {
+    padding: 2rem; 
+}
+
+.form-label {
+    font-weight: bold; 
+}
+
+.form-control {
+    border: 1px solid #ced4da; 
+    border-radius: 0.5rem; 
+    padding: 1rem;
+}
+
+.form-check-input {
+    width: 1.5rem; 
+    height: 1.5rem; 
+}
+
+.btn {
+    padding: 1rem; 
+    border-radius: 0.5rem; 
+}
+
+.bg-gradient-primary {
+    background-color: #4e73df; 
+    background-image: linear-gradient(180deg, #4e73df 10%, #224abe 100%); /* Gradient direction */
+    color: #ffffff; 
+    border: none; 
+}
+
+.bg-body-tertiary {
+    background-color: #f8f9fa; 
+}
+
+.text-sm {
+    font-size: 0.875rem; 
+    color: #6c757d; 
+}
+
+/* Footer styling */
+.footer {
+    background-color: #ffffff; 
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.158); 
+    text-align: center; 
+    color: #f2f6fa; 
+    font-size: 0.875rem; 
+    padding: 1rem 0; 
+}

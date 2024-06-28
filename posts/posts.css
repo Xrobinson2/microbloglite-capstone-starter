@@ -1,1 +1,60 @@
 /* Posts Page CSS */
+
+/* Navbar styling */
+.navbar {
+    background-color: #ffffff; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    padding: 1rem 0; 
+}
+
+.navbar-brand {
+    font-size: 1.5rem; 
+    font-weight: bold; 
+    color: #007bff; 
+}
+
+.navbar-nav .nav-link {
+    color: #6c757d; 
+    font-weight: bold; 
+    padding: 0.5rem 1rem; 
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover {
+    color: #007bff; 
+}
+
+/* Body styling */
+body {
+    background-color: #f8f9fa; 
+    font-family: 'Roboto', sans-serif; 
+    color: #495057; 
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styling */
+header {
+    background-color: #ffffff; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    padding: 1rem; 
+    text-align: center; 
+    color: #007bff; 
+}
+
+/* Main content container */
+main {
+    padding: 2rem 0; 
+}
+
+/* Footer styling */
+footer {
+    background-color: #ffffff; 
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: #6c757d; 
+    font-size: 0.875rem; 
+    padding: 1rem 0; 
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+
+  <!-- Global CSS (CSS rules you want applied to all pages) -->
+  <link rel="stylesheet" href="/global.css">
+
+  <!-- Page-specific CSS -->
+  <link rel="stylesheet" href="./landing.css">
+
+  <title>BOOK-X</title>
+
+  <!-- Run BEFORE page is finished loading (before window.onload - don't add the `defer` attribute): -->
+  <script src="./auth.js"></script>
+  <script>
+    if (isLoggedIn() === true) window.location.replace("/posts");
+  </script>
+</head>
+
+<body>
+
+  <header>
+    
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">BOOK-X</a>
+        </div>
+      </div>
+    </nav>
+
+  </header>
+
+  <main>
+
+<form id="login">
+  <div>
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username"minlength="3" required autocomplete="username">
+  </div>
+
+  <div>
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" minlength="6" required autocomplete="current-password">
+  </div>
+  <div class="form-check form-switch d-flex align-items-center mb-3">
+    <input class="form-check-input" type="checkbox" id="rememberMe" unchecked>
+    <label class="form-check-label mb-0 ms-3" for="rememberMe">Remember me</label>
+  </div>
+
+  <button class="text-center" id="loginButton" type="submit">Login</button>
+</form>
+<p>Don't have an account? <a href="registration.html">Register here</a></p>
+   
+    <footer class="footer position-absolute bottom-2 py-2 w-100">
+      <div class="container">
+        <div class="row align-items-center justify-content-lg-between">
+          <div class="col-12 col-md-6 my-auto">
+          </div>
+
+        </div>
+      </div>
+
+
+
+  </main>
+
+  <footer>
+
+    <div id="footer-bg">
+
+      <div class="row">
+          <div class="col">
+              
+              
+              
+              <footer class="py-3 my-4">
+                  <p class="text-center text-muted mb-3"> &copy; 2024 YearUp Students, all rights reserved</p>
+                  
+              </footer>
+          </div>
+
+  </footer>
+
+  <!-- Page-specific code -->
+  <script src="./landing.js"></script>
+
+</body>
+
+</html>

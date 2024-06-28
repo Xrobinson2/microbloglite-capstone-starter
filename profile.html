@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="profile.css">
+  <link rel="stylesheet" href="/global.css">
+  <script src="./auth.js"></script>
+</head>
+<header>
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/posts/index.html">Book-X</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/profile.html">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/posts/index.html"> Timeline</a>
+          </li>
+          <li class="nav-item">
+            <button id="logoutButton" class="nav-link btn btn-link">Logout</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+</header>
+
+<body>
+  <div class="container">
+    <div class="row">
+
+
+      <div class="profile-container ">
+        <div class="profile-picture " >
+          <!-- Placeholder for profile picture -->
+          <img src="/images/IMG_0281.jpeg" alt="Profile Picture">
+        </div>
+        <div>
+          <div class="container mt-4">
+            <div class="row">
+              <div class="col-md-8 offset-md-2">
+
+                <!-- Profile Header -->
+                <div class="profile-header">
+                  <h1>Xavier Robinson</h1>
+                </div>
+
+                <!-- Profile Information -->
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Profile Information</h5>
+                    <a target="_blank" rel = "noopener" href="https://www.instagram.com/digitaljavii" class="profile-instagram">
+                      <p class="card-text">Instagram: @digitaljavii</p>
+                    </a>
+                    <p class="card-text">Bio: Welcome to my blog Page. Now leave.</p>
+                    <p class="card-text">Age: Old Enuff :P</p>
+                    <p class="card-text">Location: Atlanta, GA</p>
+                    <p class="card-text">Interests: Your Grandma, Art, Your Grandma's Art</p>
+                  </div>
+                </div>
+              </div>
+              <div class="post-form mt-5">
+                <form id="postForm">
+                  <textarea id="postContent" placeholder="Whats on your mind..." required></textarea>
+                  <br>
+                  <button type="submit" class="post-button">Post</button>
+                </form>
+              </div>
+              <div class="post-feed" id="postFeed">
+                <!-- Posts will be dynamically added here -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <script src="/profilePage.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+          crossorigin="anonymous"></script>
+</body>
+
+</html>

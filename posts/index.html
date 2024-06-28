@@ -1,47 +1,87 @@
-<!-- POSTS page -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <title>Blog Timeline</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
         crossorigin="anonymous"></script>
-
-    <!-- Global CSS (CSS rules you want applied to all pages) -->
-    <link rel="stylesheet" href="/material-kit.css">
-
-    <!-- Page-specific CSS -->
-    <link rel="stylesheet" href="./posts.css">
-
-    <title>/POSTS</title>
-
-    <!-- Run BEFORE page is finished loading (before window.onload): -->
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="/css/global.css">
     <script src="../auth.js"></script>
     <script>
-        if (isLoggedIn() === false) window.location.replace("/");
+        if (isLoggedIn() === false) window.location.replace("./index.html");
     </script>
+    
 </head>
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Book-X</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                        <li class="nav-item">
+                          <a class="nav-link active" aria-current="page" href="/profile.html">Profile</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="/posts/index.html"> Timeline</a>
+                        </li>
+                      
+                    <li class="nav-item">
+                        <button id="logoutButton" class="nav-link btn btn-link">Logout</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main>
 <body>
+    
+</body>
+    
+    <div class="container mt-5" id="cardCreate">
+        <!-- Blog posts will be dynamically added here -->
+ 
+            <div class="post-feed" id="postFeed">
+                <!-- Posts will be dynamically added here -->
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+</main>
 
-    <header>
-        <h1>POSTS PAGE</h1>
-    </header>
+<footer class="bg-dark text-white text-center py-3 mt-5">
+    <div id="footer-bg">
 
-    <main>
+        <div class="row">
+            <div class="col">
+                
+                <footer class="py-3 my-4">
+                    <p class="text-center text-muted mb-3"> &copy; 2024 YearUp Students, all rights reserved</p>
+                    
+                </footer>
+            </div>
+</footer>
 
-    </main>
-
-    <footer>
-        
-    </footer>
-
-    <!-- Page-specific code -->
-    <script src="./posts.js"></script>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+<!-- Your custom JavaScript -->
+<script src="./posts.js"></script>
 </body>
 </html>
+
+

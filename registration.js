@@ -3,16 +3,16 @@
 
 
 const inputFullName = document.getElementById('inputFullName');
-const inputEmail = document.getElementById('inputEmail');
 const inputUsername = document.getElementById('inputUsername');
 const inputPassword = document.getElementById('inputPassword');
-const inputConfirmPassword = document.getElementById('inputConfirmPassword');
 const termsOfService = document.getElementById('termsOfService');
 const newsLetter = document.getElementById('newsLetter');
-const signInButton = document.getElementById('signInButton');
+const signInButton = document.getElementById("signInButton");
+const inputConfirmPassword = document.getElementById("inputConfirmPassword");
+
 
 //test
-let bodydata = {
+let TEST_bodydata = {
     "username": "Killua123",
     "fullName": "Hunter Smith",
     "password": "Djflyer1999"
@@ -21,11 +21,23 @@ let bodydata = {
 window.onload = () =>{
     console.log("connected");
     // console.log(apiBaseURL);
-    registerUser();
+    signInButton.onclick = (event) => onSignInButtonClick(event);
 }
 
 
-function registerUser(){
+
+function onSignInButtonClick(event){
+    event.preventDefault();
+    let bodydata = {
+        "username": inputUsername.value,
+        "fullName": inputFullName.value,
+        "password": inputPassword.value
+    }
+
+registerUser(bodydata);
+}
+
+function registerUser(bodydata){
     fetch("http://microbloglite.us-east-2.elasticbeanstalk.com/api/users",
         {
             method: "POST",
@@ -34,16 +46,20 @@ function registerUser(){
                 "Content-type": "application/json; charset=UTF-8"
             }
         })
-    .then(response) = () => {
+    .then(response => {
         console.log(response.status) 
-        } 
-           if(response.status == 400){  
+       
+           if(response.status == 400){ 
+            //fail case 
         }
-        response.json()
+       return response.json()
+    })
     .then(data => {
         console.log(data);
+        window.location.replace("/index.html");
     })
     .catch(err => {
+        
         console.log(err);
     })
 }

@@ -6,34 +6,45 @@
 const postForm = document.getElementById('postForm');
 const postContent = document.getElementById('postContent');
 const postFeed = document.getElementById('postFeed');
+const logoutButton = document.getElementById("logoutButton");
 
 
 
 
+logoutButton.addEventListener("click", onClickedLogoutButton);
 
 // JavaScript for handling form submission and post creation
 postForm.addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent the default form submission
     var content = postContent.value.trim();
     if (content !== '') {
-        var newPost = document.createElement('div');
+        let newPost = document.createElement('div');
         newPost.className = 'post card'; // Added 'card' class for styling
         newPost.innerHTML = '<p>' + content + '</p>';
         
         // Create and append like button
-        var likeButton = createLikeButton();
+        let likeButton = createLikeButton();
         newPost.appendChild(likeButton);
         
+       
+        createPostForUser(postContent.value);
+        
+        
+        console.log(newPost)
         postFeed.insertBefore(newPost, postFeed.firstChild); // Insert at the beginning for cascading effect
         postForm.reset(); // Reset the form after posting
     }
 });
 
-function createPostForUser () {
+function onClickedLogoutButton() {
+    logout();
+  };
+
+function createPostForUser (text) {
     const loginToken = getLoginData();
 
     let postBody = {
-        "text": document.getElementById("createPost").value,
+        "text": text,
     };
 
     const options = {
